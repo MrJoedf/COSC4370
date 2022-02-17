@@ -24,7 +24,9 @@ int main() {
     Within the for loop, make both halves of the ellipse by using two set_pixel calls.
     Canvas size (header_width) is 1920, so we iterate over half of the canvas size since we are working with halves of the ellipse.
 
-    To achieve the desired rise and run for the curves of the ellipse halves, subtracting i (iteration variable) from 960 simulates operations in the negative X coordinate on a graph (left of 0). Adding i to 960 simulates operations to the right of 0 on a graph. Note that 960 will serve as 0 (the midpoint) of our simulated graph.
+    To get the desired rise and run for the curves of the ellipse halves:
+    -- Subtracting i (iteration variable) from 960 simulates operations in the negative X coordinate on a graph (left of 0). 
+    -- Adding i to 960 simulates operations to the right of 0 on a graph. Note that 960 will serve as 0 (the midpoint) of our simulated graph.
     */
 
     for(int i=0;i<960;i++){
