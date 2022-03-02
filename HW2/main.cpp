@@ -87,6 +87,7 @@ void problem2() {
     }
     glPopMatrix();
     
+	//this creates the relation for the incline for the steps
     glTranslatef(0.2f, 0.025f+(i/240.0f), 0);
   }
     //glPopMatrix();
