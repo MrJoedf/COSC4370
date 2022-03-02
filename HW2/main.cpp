@@ -144,7 +144,7 @@ void problem4() {
   //sine wave of cubes with teapots on top
   //initial cube matrix
   
-  glPushMatrix();
+  
   //creating the sine wave
     for(int i=0; i<16; i++){
       glPushMatrix();
