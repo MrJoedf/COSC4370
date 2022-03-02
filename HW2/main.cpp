@@ -141,21 +141,36 @@ void problem3() {
 void problem4() {
     // TODO: Your code here!
   glTranslatef(-3, 0, 0);
+  //sine wave of cubes with teapots on top
+  //initial cube matrix
+  
   glPushMatrix();
+  //creating the sine wave
     for(int i=0; i<16; i++){
       glPushMatrix();
         glTranslatef(i/3.0f, sin(i), 0);
         glutSolidCube(0.33);
-      
+
+        //nested push matrix for teapots on top
         glPushMatrix();
           glTranslatef(0, 0.3, 0);
           glutSolidTeapot(0.15);
-      
+
+        //pop the matrix
          glPopMatrix();
   
     }
-     
+
+  //finally, pop the cube matrix
       glPopMatrix();
+
+  //render the 2d triangles by feeding in coordinates
+  glBegin(GL_TRIANGLES);
+     glVertex2f(1.0f, 0.0f);
+     glVertex2f(1.4f, 1.4f); 
+     glVertex2f(2.0f, 0.0f); 
+  glEnd();
+  
 
 
 }
