@@ -1,0 +1,2 @@
+1. https://community.khronos.org/t/rotating-objects-in-a-double-orbit/70704/2
+2. https://math.hws.edu/graphicsbook/c3/s1.html
