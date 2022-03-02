@@ -154,6 +154,7 @@ void problem4() {
         //nested push matrix for teapots on top
         glPushMatrix();
           glTranslatef(0, 0.3, 0);
+	  //scaling the teapots, so each one is bigger and taller than the previous one
           glScalef(i*0.075f, i*0.25f, 1);
           glutSolidTeapot(0.15);
 
