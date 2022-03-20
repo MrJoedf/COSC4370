@@ -26,10 +26,10 @@ gl_Position = projection * view * model * vec4(positionLayout, 1.0);
 FragPos = vec3(model * vec4(positionLayout, 1.0f));
 
 //normal transform is inverse transpose of a matrix
-//inverse and transpose of orthogonal matrix cancel out, so it's just model
 
 //Normal = mat3(inverse(transpose(model)))*normalLayout;
 
+//inverse and transpose of orthogonal matrix cancel out, so it's just model
 Normal = mat3(model)*normalLayout;
 
 } 
