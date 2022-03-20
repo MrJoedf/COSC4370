@@ -2,13 +2,9 @@
 #version 330 core
 out vec4 color;
 
-in vec3 FragPos;  
-in vec3 Normal;  
+in vec3 FragPos, Normal;  
   
-uniform vec3 lightPos; 
-uniform vec3 viewPos;
-uniform vec3 lightColor;
-uniform vec3 objectColor;
+uniform vec3 lightPos, viewPos, lightColor, objectColor;
 
 void main()
 {
@@ -24,7 +20,7 @@ void main()
 //get vector of the direction of light by getting different between lightPos and fragPos
   vec3 lightDir = normalize(lightPos - FragPos);
 
-  //diffuse vector is dot product of difference
+  //diffuse vector is maximum dot product of that difference
   vec3 diffuse = (max(dot(norm, lightDir), 0.0f)) * lightColor;
 
   float specStrength = 0.5f;
@@ -38,6 +34,7 @@ float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32);
 
 vec3 specular = specStrength * spec * lightColor;
 
+//add all the different types together to get the resulting shade
 vec3 result = (ambient + diffuse + specular) * objectColor;
 
     // If gl_Position was set correctly, this gives a totally red cube
