@@ -2,6 +2,8 @@
 #version 330 core
 out vec4 color;
 
+
+//looks cleaner
 in vec3 FragPos, Normal;  
   
 uniform vec3 lightPos, viewPos, lightColor, objectColor;
@@ -30,7 +32,7 @@ void main()
 //get inverse of direction of life to calculate reflection
   vec3 reflectDir = reflect(-lightDir, norm);
 
-float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32);
+float spec = pow(max(dot(viewDir, reflectDir), 0.0), 64);
 
 vec3 specular = specStrength * spec * lightColor;
 
