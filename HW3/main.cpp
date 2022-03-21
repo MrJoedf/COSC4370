@@ -195,7 +195,8 @@ int main()
         // TODO: set up the project matrix
 
       //use width and height of screen for perspective of scene
-     glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)w/(float)h, 0.1f, 100.0f);
+      //SOURCED FROM; https://learnopengl.com/Getting-started/Coordinate-Systems
+      glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)w/(float)h, 0.1f, 100.0f);
 
         // Get the uniform locations
         GLint modelLoc = glGetUniformLocation(lightingShader.Program, "model");
