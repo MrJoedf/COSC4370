@@ -5,3 +5,4 @@ https://learnopengl.com/Getting-started/Shaders
 https://learnopengl.com/Getting-started/Camera
 https://learnopengl.com/Getting-started/Coordinate-Systems
 https://stackoverflow.com/questions/36223279/why-is-the-vertex-attribute-for-normal-vector-not-working
+https://jsantell.com/model-view-projection/
