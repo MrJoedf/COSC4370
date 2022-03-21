@@ -64,6 +64,10 @@ public:
     }
 
     // TODO: Returns the view matrix calculated using Eular Angles and the LookAt Matrix
+
+//use given camera position variables as paramaters for lookAt matrix
+
+//SOURCED FROM: https://learnopengl.com/Getting-started/Camera
     glm::mat4 GetViewMatrix()
     {
       glm::mat4 view = glm::lookAt(this->Position, this->Position +  this->Front, this->WorldUp);
