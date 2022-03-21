@@ -192,11 +192,10 @@ int main()
         // Create camera transformations
         glm::mat4 view;
         view = camera.GetViewMatrix();
-        glm::mat4 projection;
         // TODO: set up the project matrix
 
       //use width and height of screen for perspective of scene
-      projection = glm::perspective(glm::radians(45.0f), (float)w/(float)h, 0.1f, 100.0f);
+     glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)w/(float)h, 0.1f, 100.0f);
 
         // Get the uniform locations
         GLint modelLoc = glGetUniformLocation(lightingShader.Program, "model");
