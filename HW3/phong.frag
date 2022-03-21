@@ -2,8 +2,6 @@
 #version 330 core
 out vec4 color;
 
-
-//looks cleaner
 in vec3 FragPos, Normal;  
   
 uniform vec3 lightPos, viewPos, lightColor, objectColor;
@@ -25,16 +23,14 @@ void main()
   //diffuse vector is maximum dot product of that difference
   vec3 diffuse = (max(dot(norm, lightDir), 0.0f)) * lightColor;
 
-  float specStrength = 0.5f;
-
   vec3 viewDir = normalize(viewPos - FragPos);
 
 //get inverse of direction of life to calculate reflection
   vec3 reflectDir = reflect(-lightDir, norm);
 
-float spec = pow(max(dot(viewDir, reflectDir), 0.0), 64);
+float spec = pow((dot(viewDir, reflectDir)), 64);
 
-vec3 specular = specStrength * spec * lightColor;
+vec3 specular = spec * lightColor;
 
 //add all the different types together to get the resulting shade
 vec3 result = (ambient + diffuse + specular) * objectColor;
