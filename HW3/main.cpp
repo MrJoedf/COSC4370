@@ -195,6 +195,7 @@ int main()
         glm::mat4 projection;
         // TODO: set up the project matrix
 
+      //use width and height of screen for perspective of scene
       projection = glm::perspective(glm::radians(45.0f), (float)w/(float)h, 0.1f, 100.0f);
 
         // Get the uniform locations
