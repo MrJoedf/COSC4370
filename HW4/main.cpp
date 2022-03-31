@@ -158,7 +158,11 @@ int main()
 
     // TODO: set up UV buffer
 
-    //Reference: https://stackoverflow.com/questions/36105693/opengl-textured-cube-tutorial-example-code-not-working
+/*References: https://stackoverflow.com/questions/36105693/opengl-textured-cube-tutorial-example-code-not-working
+
+https://stackoverflow.com/questions/65276304/texturing-a-cube-with-different-images-using-opengl
+
+http://www.opengl-tutorial.org/beginners-tutorials/tutorial-5-a-textured-cube*/
 
   //Generate then bind the respective buffers and buffer data
   //Similar to process above
@@ -167,14 +171,14 @@ int main()
   //initialize to be size of UV
   glBufferData(GL_ARRAY_BUFFER, sizeof(uv), uv, GL_STATIC_DRAW);
 
-  //starts with new location for attrib array to map texture to cube from right origin
-  glEnableVertexAttribArray(1);
+
 
   glBindBuffer(GL_ARRAY_BUFFER, UVBO);
   //apparently have to move pointer positions until correct output is 
   //Reference: http://www.opengl-tutorial.org/beginners-tutorials/tutorial-5-a-textured-cube/
 glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, (GLvoid*)0);
-    
+    //starts with new location for attrib array to map texture to cube from right origin
+    glEnableVertexAttribArray(1);
 
 
 
