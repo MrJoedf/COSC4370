@@ -1,0 +1,4 @@
+https://stackoverflow.com/questions/36105693/opengl-textured-cube-tutorial-example-code-not-working
+http://www.opengl-tutorial.org/beginners-tutorials/tutorial-5-a-textured-cube/
+https://learnopengl.com/Getting-started/Camera
+https://stackoverflow.com/questions/65276304/texturing-a-cube-with-different-images-using-opengl
