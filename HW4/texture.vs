@@ -1,4 +1,3 @@
-
 #version 330 core
 layout (location = 0) in vec3 position;
 layout(location = 1) in vec2 vertexUV;
@@ -17,6 +16,7 @@ void main()
 gl_Position = projection * view * model * vec4(position, 1.0f);
 
 //switching y to negative allows all numbers to show and flips them
+//Reference: https://stackoverflow.com/questions/36105693/opengl-textured-cube-tutorial-example-code-not-working
 UV = vec2(vertexUV.x, -vertexUV.y);
 }
  
