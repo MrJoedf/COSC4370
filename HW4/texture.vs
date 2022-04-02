@@ -16,8 +16,8 @@ void main()
 
 gl_Position = projection * view * model * vec4(position, 1.0f);
 
-//somehow has to be negative to show all numbers
-UV = -vertexUV;
+//switching y to negative allows all numbers to show and flips them
+UV = vec2(vertexUV.x, -vertexUV.y);
 }
  
 //./script.sh
